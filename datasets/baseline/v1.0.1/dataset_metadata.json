@@ -1,0 +1,66 @@
+{
+  "dataset_name": "MSP-1 Protocol Training Datasets (Baseline)",
+  "version": "1.0.1",
+  "created_date": "2026-07-04",
+  "protocol_name": "MSP-1 (Mark Semantic Protocol)",
+  "protocol_version": "1.0.1",
+  "description": "Version 1.0.1 harmonized baseline datasets for model-agnostic MSP-1 protocol behavior, validation posture, compatibility handling, and safe refusal/advisory patterns.",
+  "artifacts": [
+    {
+      "filename": "msp1_protocol_behavior_baseline.jsonl",
+      "entries": 62
+    },
+    {
+      "filename": "msp1_protocol_validation_subset.jsonl",
+      "entries": 35
+    },
+    {
+      "filename": "dataset_metadata.json"
+    },
+    {
+      "filename": "CHANGELOG.md"
+    },
+    {
+      "filename": "CHECKSUMS.sha256"
+    }
+  ],
+  "format": {
+    "type": "JSONL",
+    "encoding": "UTF-8",
+    "fields": [
+      "id",
+      "role",
+      "task",
+      "input",
+      "expected_behavior",
+      "output",
+      "rules_invoked",
+      "source_refs",
+      "difficulty"
+    ]
+  },
+  "v1_0_1_harmonization": {
+    "summary": "Adds MSP-1 v1.0.1 training expectations while preserving the immutable v1.0 dataset.",
+    "primary_changes": [
+      "Updates current-generation examples from protocol.version 1.0.0 to 1.0.1.",
+      "Treats page.id and page.url as the minimal page identity fields; page.title is compatibility-only and page.name is preferred for current naming.",
+      "Treats compliance as deprecated compatibility metadata: advisory warning, graceful parsing, and no new emission.",
+      "Updates trust vocabulary so trust.level uses low, medium, or high, while verification process state is represented separately through verification fields when supported.",
+      "Softens non-schema/unknown-field handling into advisory guidance unless a stricter implementation profile elects to reject.",
+      "Keeps discovery.wellKnown constrained to /.well-known/msp.json."
+    ]
+  },
+  "notes": [
+    "Baseline is intentionally model-agnostic and avoids persona or vendor-specific phrasing.",
+    "Datasets teach MSP-1 protocol literacy, deterministic behavior, graceful degradation, and safe refusal/advisory handling when required information is missing or unsupported.",
+    "Datasets are not a source of live page facts; use MSP-1 metadata and page content for page-specific or time-sensitive information.",
+    "The v1.0 dataset remains immutable and is retained for compatibility and historical comparison."
+  ],
+  "source_refs": [
+    "https://msp-1.org/spec/",
+    "https://msp-1.org/schema/",
+    "https://msp-1.org/ns/",
+    "https://msp-1.org/validator/v1/"
+  ],
+  "license_reference": "https://msp-1.org/docs/license/"
+}
