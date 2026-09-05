@@ -19,7 +19,8 @@ This repository is designed to be consumed by humans, tools, and automated syste
 
 | Dataset version | Protocol target | Status | Notes |
 |---|---:|---|---|
-| `datasets/baseline/v1.0.1/` | MSP-1 v1.0.1 | Current | Harmonized patch update for v1.0.1 behavior, compatibility handling, and compliance deprecation. |
+| `datasets/baseline/v1.0.2/` | MSP-1 v1.0.2 | Current | Context-surface patch: dedicated JSON-LD contexts and legacy v1.0.1 compatibility handling. |
+| `datasets/baseline/v1.0.1/` | MSP-1 v1.0.1 | Archived / immutable | Harmonized patch update for v1.0.1 behavior, compatibility handling, and compliance deprecation. |
 | `datasets/baseline/v1.0/` | MSP-1 v1.0.x | Legacy / immutable | Original baseline retained for compatibility and historical comparison. |
 
 ## Repository Structure
@@ -37,7 +38,13 @@ training-datasets/
 │     │  ├─ msp1_protocol_validation_subset.jsonl
 │     │  ├─ dataset_metadata.json
 │     │  └─ CHECKSUMS.sha256
-│     └─ v1.0.1/
+│     ├─ v1.0.1/
+│     │  ├─ msp1_protocol_behavior_baseline.jsonl
+│     │  ├─ msp1_protocol_validation_subset.jsonl
+│     │  ├─ dataset_metadata.json
+│     │  ├─ CHANGELOG.md
+│     │  └─ CHECKSUMS.sha256
+│     └─ v1.0.2/
 │        ├─ msp1_protocol_behavior_baseline.jsonl
 │        ├─ msp1_protocol_validation_subset.jsonl
 │        ├─ dataset_metadata.json
@@ -62,8 +69,8 @@ Each dataset version includes a `CHECKSUMS.sha256` file.
 Consumers are expected to verify checksums before use to ensure dataset integrity and provenance.
 
 ```bash
-python tools/validate_jsonl.py datasets/baseline/v1.0.1/*.jsonl
-python tools/verify_checksums.py datasets/baseline/v1.0.1/CHECKSUMS.sha256
+python tools/validate_jsonl.py datasets/baseline/v1.0.2/*.jsonl
+python tools/verify_checksums.py datasets/baseline/v1.0.2/CHECKSUMS.sha256
 ```
 
 ## License
