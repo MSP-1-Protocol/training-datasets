@@ -1,0 +1,67 @@
+{
+  "dataset_name": "MSP-1 Protocol Training Datasets (Baseline)",
+  "version": "1.0.2",
+  "created_date": "2026-09-05",
+  "protocol_name": "MSP-1 (Mark Semantic Protocol)",
+  "protocol_version": "1.0.2",
+  "description": "Version 1.0.2 baseline datasets aligned with the dedicated JSON-LD context architecture while preserving established MSP-1 vocabulary, declaration structure, and non-binding semantics.",
+  "artifacts": [
+    {
+      "filename": "msp1_protocol_behavior_baseline.jsonl",
+      "entries": 62
+    },
+    {
+      "filename": "msp1_protocol_validation_subset.jsonl",
+      "entries": 35
+    },
+    {
+      "filename": "dataset_metadata.json"
+    },
+    {
+      "filename": "CHANGELOG.md"
+    },
+    {
+      "filename": "CHECKSUMS.sha256"
+    }
+  ],
+  "format": {
+    "type": "JSONL",
+    "encoding": "UTF-8",
+    "fields": [
+      "id",
+      "role",
+      "task",
+      "input",
+      "expected_behavior",
+      "output",
+      "rules_invoked",
+      "source_refs",
+      "difficulty"
+    ]
+  },
+  "v1_0_2_update": {
+    "summary": "Updates the baseline for MSP-1 v1.0.2 context/schema separation while retaining the v1.0.1 dataset shape and record counts.",
+    "primary_changes": [
+      "Updates current-generation examples to protocol.version 1.0.2.",
+      "Uses dedicated /context/ JSON-LD resources for new page and site declarations.",
+      "Treats /schema/ resources as structural validation surfaces rather than JSON-LD contexts.",
+      "Treats v1.0.1 schema-as-context declarations as legacy compatibility input and provides migration behavior.",
+      "Does not emit page.title; page.id and page.url remain the minimal page identity fields and page.name remains optional.",
+      "Continues to treat compliance as deprecated compatibility metadata and preserves non-binding semantics."
+    ]
+  },
+  "notes": [
+    "Baseline remains model-agnostic and preserves the established 62-record behavior file and 35-record validation subset.",
+    "Reference outputs demonstrate expected behavior without requiring exact wording.",
+    "Datasets are not a source of live page facts or a performance benchmark.",
+    "Previously published v1.0 and v1.0.1 directories remain immutable."
+  ],
+  "source_refs": [
+    "https://msp-1.org/spec/",
+    "https://msp-1.org/schema/",
+    "https://msp-1.org/context/",
+    "https://msp-1.org/ns/",
+    "https://msp-1.org/validator/v1/"
+  ],
+  "license_reference": "https://msp-1.org/docs/license/"
+}
