@@ -1,0 +1,41 @@
+{
+  "@context": "https://msp-1.org/context/msp-1-site.jsonld",
+  "@type": "MSPSite",
+  "protocol": {
+    "name": "MSP-1",
+    "version": "1.0.2"
+  },
+  "site": {
+    "id": "https://github.com/MSP-1-Protocol/training-datasets",
+    "name": "MSP-1 Training Datasets",
+    "url": "https://github.com/MSP-1-Protocol/training-datasets",
+    "description": "Versioned, checksum-verified baseline datasets for MSP-1 protocol behavior, validation patterns, compatibility handling, and edge cases.",
+    "intent": "Provide stable, model-agnostic, deterministic reference datasets for humans, tools, and automated systems evaluating or implementing MSP-1 behavior and validation.",
+    "interpretiveFrame": {
+      "frame": "Interpret this repository as a versioned reference dataset surface for MSP-1. Published dataset versions are intended to remain immutable and should be verified using their accompanying checksums before use.",
+      "category": "informational",
+      "scope": "repository"
+    },
+    "canonical": {
+      "url": "https://github.com/MSP-1-Protocol/training-datasets"
+    }
+  },
+  "authority": {
+    "name": "MSP-1",
+    "type": "Organization",
+    "id": "https://github.com/MSP-1-Protocol",
+    "scope": "Stewardship of this repository and its published contents."
+  },
+  "provenance": {
+    "type": "ai-assisted",
+    "source": "https://github.com/MSP-1-Protocol/training-datasets",
+    "timestamp": "2026-09-13T19:54:00-04:00",
+    "notes": "Initial repository-root MSP-1 declaration generated from the public repository and its published description or README for publisher review."
+  },
+  "revision": {
+    "id": "repo-msp-rev-2026-09-13",
+    "revisionDate": "2026-09-13",
+    "revisionNotes": "Initial repository-root MSP-1 declaration for the GitHub repository convention; generated from current public repository content for publisher review.",
+    "revisionVersion": "1.0.0"
+  }
+}
